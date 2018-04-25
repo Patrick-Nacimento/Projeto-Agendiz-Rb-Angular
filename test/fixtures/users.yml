@@ -1,0 +1,255 @@
+unconfirmed:
+  uid: foo@bar.com
+  email: foo@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+confirmed:
+  uid: confirmed@bar.com
+  email: confirmed@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+confirmed_two:
+  uid: confirmedtwo@bar.com
+  email: confirmedtwo@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+logged:
+  uid: logged@bar.com
+  email: logged@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+invited:
+  uid: invited@bar.com
+  email: invited@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+logged_two:
+  uid: logged_two@bar.com
+  email: logged_two@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+logged_in_out:
+  uid: logged_in_out@bar.com
+  email: logged_in_out@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+recoverable:
+  uid: recoverable@bar.com
+  email: recoverable@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+recoverable_two:
+  uid: recoverable_two@bar.com
+  email: recoverable_two@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+recoverable_mailer:
+  uid: recoverable_mailer@bar.com
+  email: recoverable_mailer@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+confirmable:
+  uid: confirmable@bar.com
+  email: confirmable@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmation_sent_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+confirmable_mailer:
+  uid: confirmable_mailer@bar.com
+  email: confirmable_mailer@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+facebook:
+  uid: 321312312
+  email: facebook@bar.com
+  provider: facebook
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+one:
+  uid: one@bar.com
+  email: one@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+two:
+  uid: two@bar.com
+  email: two@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+aa:
+  uid: aa@bar.com
+  email: aa@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+bb:
+  uid: bb@bar.com
+  email: bb@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+sort_first:
+  uid: sort_1@bar.com
+  email: sort_1@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+sort_last:
+  uid: sort_2@bar.com
+  email: sort_2@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+active:
+  uid: active@bar.com
+  email: active@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: true
+
+inactive:
+  uid: inactive@bar.com
+  email: inactive@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  created_at: <%= DateTime.now %>
+  updated_at: <%= DateTime.now %>
+  active: false
+
+admin_logged:
+  uid: admin_logged@bar.com
+  email: admin_logged@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+
+admin_not_logged:
+  uid: admin_not_logged@bar.com
+  email: admin_not_logged@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+
+not_admin_logged:
+  uid: not_admin_logged@bar.com
+  email: not_admin_logged@bar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+  confirmed_at: <%= DateTime.now %>
+  tokens: "{\"client_id_test\":{\"token\":\"<%= BCrypt::Password.create("token_test") %>\",\"expiry\":<%= (DateTime.now + 10.years).to_i %>,\"last_token\":\"$2a$10$56mXiJZk2yeuQ1yocKH8E.9pfYiJZf9z7FhZGlH61jLwo85rQtlIu\",\"updated_at\":\"2015-03-24T13:57:01.952-03:00\"}}"
+
+from_other_customer:
+  uid: other_customer@foobar.com
+  email: other_customer@foobar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+
+from_customer_three:
+  uid: from_customer_three@foobar.com
+  email: from_customer_three@foobar.com
+  provider: email
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
+
+deleted:
+  uid: $LABEL@foobar.com
+  email: $LABEL@foobar.com
+  provider: email
+  deleted_at: <%= DateTime.now %>
+  encrypted_password: <%= BCrypt::Password.create("123123123") %>
