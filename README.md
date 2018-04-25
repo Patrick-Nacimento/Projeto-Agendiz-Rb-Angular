@@ -1,24 +1,23 @@
-# README
+* Criar um grupo privado com o nome da empresa se ainda não existir
+* Criar um projeto privado dentro desse grupo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.4.4
+* Ruby version 5.2.0
 
-Things you may want to cover:
+* Clonar rails_base
+* Entrar no projeto
+* Executar o comando "rails g rename:into Nome-do-novo-projeto"
+* Sair do rails_base e entrar no novo projeto
 
-* Ruby version
+* Database create/migrate
 
-* System dependencies
+* Rails test para ver ser deu certo
 
-* Configuration
+* Revisar versões das Gems
 
-* Database creation
+* git config --global user.name "seu-ome"
+* git config --global user.email "seu-email"
+* git remote add origin endereco-do-projeto-no-git
+* git commit -m "Initial commit"
+* git push -u origin master
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
