@@ -30,7 +30,7 @@ gem 'paranoia'
 #Enum
 gem 'enumerate_it'
 
-gem 'cancancan'
+gem 'cancancan', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,12 +55,14 @@ group :test do
   gem 'company_data_faker'
 end
 
+gem 'rename'
+
 # Modules
-gem 'api_base', path: '../api_base'
+# gem 'api_base', path: '../api_base'
 gem 'api_auth', path: '../api_auth'
 # gem 'angular_base_material', path: '../../../modules/angular_base_material'
 
-# gem 'api_base', git: 'git@gitlab.velow.com.br:modules/api_base.git', branch: 'url_auth_key'
+gem 'api_base', git: 'git@gitlab.velow.com.br:modules/api_base.git', branch: 'url_auth_key'
 # gem 'api_auth', git: 'git@gitlab.velow.com.br:modules/api_auth.git', branch: 'new_design'
 gem 'angular_base_material', git: 'git@gitlab.velow.com.br:modules/angular_base_material.git', branch: 'new_design'
 
