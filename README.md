@@ -7,6 +7,13 @@
 * Ruby version 2.4.4
 * Ruby version 5.2.0
 
+## Configurações prontas
+* Configurações de testes
+* Configurações de ambiente (Rever se mudar a versão do Rails)
+* Login
+* Recuperar senha
+* Gems padrões
+
 ## Configurar na maquina/terminal
 * git clone git@gitlab.velow.com.br:modules/rails_base.git
 * Entrar no projeto
@@ -17,6 +24,7 @@
 * Database create/migrate
 * Rails test para ver ser deu certo
 * Revisar versões das Gems
+* Alterar texto do e-mail de recuperação de senha
 
 ## Configurar novo projeto com o gitlab
 * git config --global user.name "seu-ome"
@@ -24,3 +32,4 @@
 * git remote add origin endereco-do-projeto-no-git
 * git commit -m "Initial commit"
 * git push -u origin master
+

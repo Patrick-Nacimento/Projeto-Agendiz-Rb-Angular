@@ -1,0 +1,8 @@
+pt-BR:
+  mailer:
+    reset_password:
+      subject: "Intranet - alterar senha"
+      greeting: "Olá %{user_name}"
+      content: "Estamos quase lá, agora você precisa clicar no link abaixo para definir uma nova senha de acesso."
+      ignore_this_message: "Caso você não tenha solicitado a alteração da senha, é só ignorar este e-mail e continuar usando a sua senha atual."
+      link: 'https://localhost:3000/esqueci_minha_senha/%{hash}'
