@@ -2,12 +2,7 @@
 Rails.application.config.to_prepare do
   ::UserSerializer.class_eval do
     attributes :email,
-               :name,
-               :profile,
-               :is_admin
+               :name
 
-    def profile
-      enum('profile')
-    end
   end
 end

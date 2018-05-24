@@ -6,12 +6,12 @@ default: &default
 
 development:
   <<: *default
-  database: rails_base_development
+  database: project_base_development
 
 test:
   <<: *default
-  database: rails_base_test
+  database: project_base_test
 
 production:
   <<: *default
-  database: rails_base_production
+  database: project_base_production

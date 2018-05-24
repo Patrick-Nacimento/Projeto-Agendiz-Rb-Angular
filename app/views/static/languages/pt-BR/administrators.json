@@ -1,0 +1,64 @@
+{
+  "administrators": {
+    "name": {
+      "one": "Administrator",
+      "other": "Administratores"
+    },
+    "list": {
+      "not_found": {
+        "message": "Não existem administratores cadastrados",
+        "message_filters": "Administratores não encontrados",
+        "tip": "Cadastre um administrator e ele aparecerá aqui.",
+        "tip_filters": "Redefina seus filtros e tente novamente."
+      }
+    },
+    "status": {
+      "active": "Ativo",
+      "inactive": "Inativo"
+    },
+    "table": {
+      "columns": {
+        "name": "Nome",
+        "email": "E-mail",
+        "status": "Situação"
+      },
+      "badges": {
+        "status": {
+          "true": "Ativo",
+          "false": "Inativo"
+        }
+      }
+    },
+    "filters": {
+      "email": {
+        "label": "E-mail",
+        "param": "email"
+      },
+      "status": {
+        "label": "Status",
+        "param": "status"
+      },
+      "reverse": {
+        "email": "email",
+        "status": "status"
+      }
+    },
+    "tabs": {
+      "general": "Dados cadastrais"
+    },
+    "params": {
+      "name": "Nome",
+      "email": "E-mail de acesso",
+      "admin": "Administrador",
+      "password": "Senha",
+      "password_confirmation": "Confirmação de senha",
+      "change_password": "Alterar senha"
+    },
+    "enumerations": {
+      "status": {
+        "1": "Ativos",
+        "2": "Inativos"
+      }
+    }
+  }
+}

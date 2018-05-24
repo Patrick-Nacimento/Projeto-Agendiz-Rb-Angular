@@ -85,7 +85,7 @@ Rails.application.config.to_prepare do
     private
 
     def list
-      @users = ::User.by_profile(::User.current_user.profile)
+      @users = ::User.all
       @users = apply_filters(@users,
                              :by_email,
                              :active_boolean)

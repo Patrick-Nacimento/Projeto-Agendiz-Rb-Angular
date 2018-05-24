@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "modules": {
+      "dashboard": {
+        "label": "Dashboard"
+      }
+    },
+    "config": {
+      "permission": {
+        "label": "Acesso",
+        "users.index": "Usuários",
+        "administrators": {
+          "index": "Administradores"
+        }
+      },
+      "settings": {
+        "label": "Geral"
+      }
+    },
+    "my_profile": "Meu perfil",
+    "sign_out": "Sair"
+  }
+}

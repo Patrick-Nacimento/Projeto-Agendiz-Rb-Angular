@@ -1,0 +1,130 @@
+<div class="min-width-sm" ng-if="!object.id">
+    <h2 class="md-title">
+        {{ ::'dialogs.title.new' | translate}}
+        {{ ::resourceConfig.translationBase + '.name.one' | translate}}
+    </h2>
+
+    <div layout="column" flex>
+        <md-input-container flex
+                            class="md-block"
+                            form-input
+                            form="form"
+                            type="text"
+                            translation-base="resourceConfig.translationBase"
+                            name="name"
+                            model="object.name"
+                            maxlength="255"
+                            autocomplete="false"
+                            required="true"
+                            permission="canCreate()"></md-input-container>
+
+        <md-input-container flex="100"
+                            form-input
+                            form="form"
+                            type="text"
+                            translation-base="resourceConfig.translationBase"
+                            name="email"
+                            model="object.email"
+                            maxlength="100"
+                            required="true"
+                            permission="canCreate()"></md-input-container>
+
+        <md-input-container flex="100"
+                            form-input
+                            form="form"
+                            type="password"
+                            translation-base="resourceConfig.translationBase"
+                            name="password"
+                            model="object.password"
+                            required="true"
+                            permission="canCreate()"></md-input-container>
+
+        <md-input-container flex="100"
+                            form-input
+                            form="form"
+                            type="password"
+                            translation-base="resourceConfig.translationBase"
+                            name="password_confirmation"
+                            model="object.password_confirmation"
+                            required="true"
+                            permission="canCreate()"></md-input-container>
+
+        <md-checkbox ng-model="object.is_admin"
+                     aria-label="{{::resourceConfig.translationBase + '.params.admin' | translate}}"
+                     ng-if="canCreate()"
+                     ng-cloak translate-cloak>
+            {{::resourceConfig.translationBase + '.params.admin' | translate}}
+        </md-checkbox>
+    </div>
+</div>
+
+<div class="min-width-sm" ng-if="object.id">
+    <h2 class="md-title">
+        {{ ::'dialogs.title.edit' | translate}}
+        {{ ::resourceConfig.translationBase + '.name.one' | translate}}
+    </h2>
+
+    <div layout="column" flex>
+        <md-input-container flex
+                            class="md-block"
+                            form-input
+                            form="form"
+                            type="text"
+                            translation-base="resourceConfig.translationBase"
+                            name="name"
+                            model="object.name"
+                            maxlength="255"
+                            autocomplete="false"
+                            required="true"
+                            permission="canCreate()"></md-input-container>
+
+        <md-input-container flex="100"
+                            form-input
+                            form="form"
+                            type="text"
+                            translation-base="resourceConfig.translationBase"
+                            name="email"
+                            model="object.email"
+                            maxlength="100"
+                            required="true"
+                            permission="canInput()"></md-input-container>
+
+        <md-checkbox ng-model="object.is_admin" flex-xs="100"
+                     aria-label="{{::resourceConfig.translationBase + '.params.admin' | translate}}"
+                     ng-if="object.id && canInput()"
+                     ng-cloak translate-cloak>
+            {{::resourceConfig.translationBase + '.params.admin' | translate}}
+        </md-checkbox>
+
+        <md-divider class="margin-bottom"></md-divider>
+
+        <md-checkbox ng-model="object.changePassword" flex-xs="100"
+                     aria-label="{{::resourceConfig.translationBase + '.params.change_password' | translate}}"
+                     ng-if="object.id && canInput()"
+                     ng-cloak translate-cloak>
+            {{::resourceConfig.translationBase + '.params.change_password' | translate}}
+        </md-checkbox>
+    </div>
+
+    <div layout="column" ng-if="(object.id && object.changePassword || !object.id)">
+        <md-input-container flex="100"
+                            form-input
+                            form="form"
+                            type="password"
+                            translation-base="resourceConfig.translationBase"
+                            name="password"
+                            model="object.password"
+                            required="true"
+                            permission="canInput()"></md-input-container>
+
+        <md-input-container flex="100"
+                            form-input
+                            form="form"
+                            type="password"
+                            translation-base="resourceConfig.translationBase"
+                            name="password_confirmation"
+                            model="object.password_confirmation"
+                            required="true"
+                            permission="canInput()"></md-input-container>
+    </div>
+</div>

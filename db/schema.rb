@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_04_25_125502) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.string "name"
     t.string "email", limit: 60
     t.boolean "active", default: true, null: false
     t.text "tokens"
