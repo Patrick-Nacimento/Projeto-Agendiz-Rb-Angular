@@ -1,7 +1,7 @@
 # Configurações para criar novo projeto
 ## Gitlab
-* Criar um grupo privado com o nome da empresa se ainda não existir
-* Criar um projeto privado dentro desse grupo
+* Criar um grupo internal com o nome da empresa se ainda não existir
+* Criar um projeto internal dentro desse grupo
 
 ## Versões no rails_base
 * Ruby version 2.4.4

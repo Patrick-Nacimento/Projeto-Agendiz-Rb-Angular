@@ -27,5 +27,8 @@ module RailsBase
 
     #Errors
     config.exceptions_app = self.routes
+
+    config.generators.assets = false
+    config.generators.helper = false
   end
 end
