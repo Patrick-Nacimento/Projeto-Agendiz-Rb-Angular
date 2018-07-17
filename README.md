@@ -36,6 +36,7 @@
 * git config --global user.name "seu-ome"
 * git config --global user.email "seu-email"
 * git remote set-url origin endereco-do-projeto-no-git
+* git add .
 * git commit -m "Initial commit"
 * git push -u origin master
 
