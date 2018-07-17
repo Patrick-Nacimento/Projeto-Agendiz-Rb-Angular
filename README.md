@@ -18,10 +18,10 @@
 * Gems padrões
 
 ## Configurar na maquina/terminal
-* git clone git@gitlab.velow.com.br:modules/rails_base.git
+* git clone git@gitlab.velow.com.br:modules/project_base.git
 * Entrar no projeto
 * Executar o comando "rails g rename:into Nome-do-novo-projeto"
-* Sair do rails_base e entrar no novo projeto
+* Sair do project_base e entrar no novo projeto
 
 ## Configurar Angular
 * Ajustar nome do projeto e cores em assets/javascripts/application.js
