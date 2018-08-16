@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.4'
+ruby '2.5.1'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1'
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -59,11 +59,11 @@ gem 'rename'
 
 # Modules
 # gem 'api_base', path: '../api_base'
-gem 'api_auth', path: '../api_auth'
+# gem 'api_auth', path: '../api_auth'
 # gem 'angular_base_material', path: '../../../modules/angular_base_material'
 
 gem 'api_base', git: 'git@gitlab.velow.com.br:modules/api_base.git', branch: 'url_auth_key'
-# gem 'api_auth', git: 'git@gitlab.velow.com.br:modules/api_auth.git', branch: 'new_design'
-gem 'angular_base_material', git: 'git@gitlab.velow.com.br:modules/angular_base_material.git', branch: 'new_design'
+gem 'api_auth', git: 'git@gitlab.velow.com.br:modules/api_auth.git', branch: 'v2018'
+gem 'angular_base_material', git: 'git@gitlab.velow.com.br:modules/angular_base_material.git', branch: 'v2018'
 
 

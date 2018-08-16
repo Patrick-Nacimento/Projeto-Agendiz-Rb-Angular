@@ -4,11 +4,11 @@
 * Criar um projeto internal dentro desse grupo
 
 ## Versões no project_base
-* Ruby version 2.4.4
-* Ruby version 5.2.0
+* Ruby version 2.5.1
+* Ruby version 5.2.1
 * API Base branch url_auth_key
-* API Auth branch url_auth_key
-* Angular branch new_design
+* API Auth branch v2018
+* Angular branch v2018
 
 ## Configurações prontas
 * Configurações de testes
@@ -16,6 +16,7 @@
 * Login
 * Recuperar senha
 * Gems padrões
+* Controle de integração
 
 ## Configurar na maquina/terminal
 * git clone git@gitlab.velow.com.br:modules/project_base.git

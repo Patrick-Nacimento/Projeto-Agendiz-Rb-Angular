@@ -2,6 +2,8 @@ require_dependency APIAuth::Engine.root.join('app', 'controllers', 'api_auth', '
 
 Rails.application.config.to_prepare do
   APIAuth::SessionsController.class_eval do
+    before_action :check_auth
+
     def create
       email = session_params[:email].downcase if session_params[:email]
 
@@ -32,20 +34,51 @@ Rails.application.config.to_prepare do
           @resource.current_sign_in_ip = request.remote_ip
         end
 
-        @resource.save
+        if @resource.save
+          if @resource.respond_to?(:customers) && Gem::Specification::find_all_by_name('customer').any?
+            User.current_user = @resource
+            Customer::Customer.current_customer = @resource.customers.first if @resource.customers.size == 1
+          end
 
-        if @resource.respond_to?(:customers) && Gem::Specification::find_all_by_name('customer').any?
-          User.current_user = @resource
-          Customer::Customer.current_customer = @resource.customers.first if @resource.customers.size == 1
+          render :json => {success: t('.success'), token: @token, client_id: @client_id, data: @resource.serializable_hash, meta: @meta}, status: 201
+        else
+          render :json => {error: t('.error'), meta: @meta}, status: 401
         end
 
-        render :json => {success: t('.success'), token: @token, client_id: @client_id, data: @resource.serializable_hash , meta: @meta}, status: 201
       elsif User.devise_modules.include?(:confirmable) and @resource and not @resource.confirmed?
         render :json => {error: t('.unconfirmed', email: @resource.email), meta: @meta}, status: 401
       else
         render :json => {error: t('.error'), meta: @meta}, status: 401
       end
 
+    end
+
+    def destroy
+      # remove auth instance variables so that after_filter does not run
+      user = remove_instance_variable(:@current_user) if @current_user
+      @client_id = request.headers['client'] if @client_id.nil?
+      client_id = remove_instance_variable(:@client_id) if @client_id
+      remove_instance_variable(:@token) if @token
+      remove_instance_variable(:@current_customer) if @current_customer
+
+      if user and client_id and user.tokens[client_id]
+        user.tokens.delete(client_id)
+        user.save!
+
+        render :json => {success: t('.success'), meta: @meta}, status: 200
+      else
+        render :json => {error: t('.not_found'), meta: @meta}, status: 404
+      end
+    end
+
+    private
+
+    def check_auth
+      if ::Integration.check_auth(params[:authkey], request.headers['authkey'])
+        true
+      else
+        render :json => {error: t('.error'), meta: @meta}, status: 401
+      end
     end
   end
 end

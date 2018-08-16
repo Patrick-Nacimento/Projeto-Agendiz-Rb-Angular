@@ -1,11 +1,18 @@
 pt-BR:
   attributes:
+    active: Ativo
+    name: Nome
   activerecord:
     models:
+      integration:
+        one: &integration Integração
+        other: &integrations Integrações
       user:
         one: &user Usuário
         other: &users Usuários
     attributes:
+      integration:
+        auth_key: Chave de autenticação
       user:
         password: Senha
         password_confirmation: Confirmação de senha

@@ -12,6 +12,10 @@ test:
   <<: *default
   database: project_base_test
 
+sandbox:
+  <<: *default
+  database: project_base_sandbox
+
 production:
   <<: *default
   database: project_base_production
