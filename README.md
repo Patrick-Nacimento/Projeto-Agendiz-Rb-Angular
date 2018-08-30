@@ -40,4 +40,13 @@
 * git add .
 * git commit -m "Initial commit"
 * git push -u origin master
+* 
+
+## Primeiro acesso
+* Executar o comando rake db:seed
+* Após o seed executado, deve ser aberto o console do rails (rails c)
+* Executei o seguinte comando no console: "::Integration.where(name: 'Painel')" e copie a chave contida no atributo auth_key
+* Após ter a chave, vá até o arquivo assets/javascripts/application.js
+* Troque o conteúdo da tag authkey pela chave copiada.
+* Após seguir os passo, será posssível fazer login no portal.
 
