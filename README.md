@@ -40,7 +40,6 @@
 * git add .
 * git commit -m "Initial commit"
 * git push -u origin master
-* 
 
 ## Primeiro acesso
 * Executar o comando rake db:seed
