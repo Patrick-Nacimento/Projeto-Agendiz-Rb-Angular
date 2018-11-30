@@ -8,21 +8,15 @@ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'savon'
-gem 'cpf_cnpj'
-
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem 'execjs'
 gem 'therubyracer'
 
-
 # NO SQL background process
 gem 'resque'
 gem 'resque-scheduler'
-
-
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -53,7 +47,7 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters'
   gem 'shoulda-context'
-  gem 'shoulda', '3.5'
+  gem 'shoulda'
   gem 'mocha'
 
   gem 'faker'
@@ -61,15 +55,12 @@ group :test do
   gem 'company_data_faker'
 end
 
-gem 'savon'
-gem 'cpf_cnpj'
-
 gem 'rename'
 
 # Modules
 # gem 'api_base', path: '../api_base'
 # gem 'api_auth', path: '../api_auth'
-# gem 'angular_base_material', path: '../angular_base_material'
+# gem 'angular_base_material', path: '../../../modules/angular_base_material'
 
 gem 'api_base', git: 'git@gitlab.velow.com.br:modules/api_base.git', branch: 'url_auth_key'
 gem 'api_auth', git: 'git@gitlab.velow.com.br:modules/api_auth.git', branch: 'v2018'
