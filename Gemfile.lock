@@ -1,14 +1,27 @@
 GIT
   remote: git@gitlab.velow.com.br:modules/angular_base_material.git
-  revision: a86f956e083ceeeab5e7af8248d59d5d36ce64df
-  branch: new_design
+  revision: 310e467d6e82a8d5d0051ea7da154e37cc33bb4a
+  branch: v2018
   specs:
     angular_base_material (0.1.3)
       bower-rails
 
 GIT
+  remote: git@gitlab.velow.com.br:modules/api_auth.git
+  revision: 03f0929dac75e9ad2d1e3c0b5fe82ccde985f3aa
+  branch: v2018
+  specs:
+    api_auth (1.0.0)
+      api_base
+      devise_token_auth
+      email_validator
+      koala (~> 2.2)
+      omniauth (~> 1.2)
+      paranoia
+
+GIT
   remote: git@gitlab.velow.com.br:modules/api_base.git
-  revision: 446c1724969b875663b51b7289beca741a12b91c
+  revision: c8823ba77c901555a822debbbd919b71b0218214
   branch: url_auth_key
   specs:
     api_base (1.0.0)
@@ -22,74 +35,66 @@ GIT
       sass-rails (>= 3.2)
       will_paginate
 
-PATH
-  remote: ../api_auth
-  specs:
-    api_auth (1.0.0)
-      api_base
-      devise_token_auth
-      email_validator
-      koala
-      omniauth
-      paranoia
-
 GEM
   remote: https://rubygems.org/
   specs:
-    actioncable (5.2.0)
-      actionpack (= 5.2.0)
+    actioncable (5.2.1.1)
+      actionpack (= 5.2.1.1)
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
-    actionmailer (5.2.0)
-      actionpack (= 5.2.0)
-      actionview (= 5.2.0)
-      activejob (= 5.2.0)
+    actionmailer (5.2.1.1)
+      actionpack (= 5.2.1.1)
+      actionview (= 5.2.1.1)
+      activejob (= 5.2.1.1)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 2.0)
-    actionpack (5.2.0)
-      actionview (= 5.2.0)
-      activesupport (= 5.2.0)
+    actionpack (5.2.1.1)
+      actionview (= 5.2.1.1)
+      activesupport (= 5.2.1.1)
       rack (~> 2.0)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (5.2.0)
-      activesupport (= 5.2.0)
+    actionview (5.2.1.1)
+      activesupport (= 5.2.1.1)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
     active_model_serializers (0.9.3)
       activemodel (>= 3.2)
-    activejob (5.2.0)
-      activesupport (= 5.2.0)
+    activejob (5.2.1.1)
+      activesupport (= 5.2.1.1)
       globalid (>= 0.3.6)
-    activemodel (5.2.0)
-      activesupport (= 5.2.0)
-    activerecord (5.2.0)
-      activemodel (= 5.2.0)
-      activesupport (= 5.2.0)
+    activemodel (5.2.1.1)
+      activesupport (= 5.2.1.1)
+    activerecord (5.2.1.1)
+      activemodel (= 5.2.1.1)
+      activesupport (= 5.2.1.1)
       arel (>= 9.0)
-    activestorage (5.2.0)
-      actionpack (= 5.2.0)
-      activerecord (= 5.2.0)
+    activestorage (5.2.1.1)
+      actionpack (= 5.2.1.1)
+      activerecord (= 5.2.1.1)
       marcel (~> 0.3.1)
-    activesupport (5.2.0)
+    activesupport (5.2.1.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    akami (1.3.1)
+      gyoku (>= 0.4.0)
+      nokogiri
     ansi (1.5.0)
     api-versions (1.2.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
     arel (9.0.0)
-    autoprefixer-rails (8.5.0)
+    autoprefixer-rails (9.3.1)
       execjs
-    bcrypt (3.1.11)
-    bootsnap (1.3.0)
+    bcrypt (3.1.12)
+    bootsnap (1.3.2)
       msgpack (~> 1.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -97,126 +102,135 @@ GEM
     bower-rails (0.11.0)
     builder (3.2.3)
     byebug (10.0.2)
-    cancancan (2.1.4)
-    clipboard (1.1.1)
+    cancancan (2.3.0)
+    clipboard (1.1.2)
     colorize (0.8.1)
     company_data_faker (0.1.4)
       i18n (>= 0.5)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.3)
+    cpf_cnpj (0.5.0)
     cpf_faker (1.3.0)
       clipboard
     crass (1.0.4)
-    devise (4.4.3)
+    devise (4.5.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    devise_token_auth (0.1.43)
-      devise (> 3.5.2, < 4.5)
-      rails (< 6)
+    devise_token_auth (1.0.0)
+      devise (> 3.5.2, < 4.6)
+      rails (>= 4.2.0, < 6)
     email_validator (1.6.0)
       activemodel
     enumerate_it (1.7.0)
       activesupport (>= 3.0.0)
     erubi (1.7.1)
-    et-orbi (1.1.0)
+    et-orbi (1.1.6)
       tzinfo
     execjs (2.7.0)
-    faker (1.8.7)
+    faker (1.9.1)
       i18n (>= 0.7)
-    faraday (0.15.0)
+    faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.23)
+    ffi (1.9.25)
+    fugit (1.1.6)
+      et-orbi (~> 1.1, >= 1.1.6)
+      raabro (~> 1.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gyoku (1.3.1)
+      builder (>= 2.1.2)
     hashie (3.5.7)
-    i18n (1.0.1)
+    httpi (2.4.4)
+      rack
+      socksify
+    i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    json (2.1.0)
-    koala (3.0.0)
+    koala (2.5.0)
       addressable
       faraday
-      json (>= 1.8)
     libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.7.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
-    marcel (0.3.2)
+    marcel (0.3.3)
       mimemagic (~> 0.3.2)
     metaclass (0.0.4)
-    method_source (0.9.0)
+    method_source (0.9.2)
     mimemagic (0.3.2)
-    mini_mime (1.0.0)
+    mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    minitest-reporters (1.2.0)
+    minitest-reporters (1.3.5)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    mocha (1.5.0)
+    mocha (1.7.0)
       metaclass (~> 0.0.1)
     mono_logger (1.1.0)
     msgpack (1.2.4)
     multi_json (1.13.1)
     multipart-post (2.0.0)
-    mustermann (1.0.2)
-    nio4r (2.3.0)
-    nokogiri (1.8.2)
+    mustermann (1.0.3)
+    nio4r (2.3.1)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    nori (2.6.0)
     omniauth (1.8.1)
       hashie (>= 3.4.6, < 3.6.0)
       rack (>= 1.6.2, < 3)
     orm_adapter (0.5.0)
     paranoia (2.4.1)
       activerecord (>= 4.0, < 5.3)
-    pg (1.0.0)
-    public_suffix (3.0.2)
-    rack (2.0.5)
-    rack-protection (2.0.1)
+    pg (1.1.3)
+    public_suffix (3.0.3)
+    raabro (1.1.6)
+    rack (2.0.6)
+    rack-protection (2.0.4)
       rack
-    rack-test (1.0.0)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    rails (5.2.0)
-      actioncable (= 5.2.0)
-      actionmailer (= 5.2.0)
-      actionpack (= 5.2.0)
-      actionview (= 5.2.0)
-      activejob (= 5.2.0)
-      activemodel (= 5.2.0)
-      activerecord (= 5.2.0)
-      activestorage (= 5.2.0)
-      activesupport (= 5.2.0)
+    rails (5.2.1.1)
+      actioncable (= 5.2.1.1)
+      actionmailer (= 5.2.1.1)
+      actionpack (= 5.2.1.1)
+      actionview (= 5.2.1.1)
+      activejob (= 5.2.1.1)
+      activemodel (= 5.2.1.1)
+      activerecord (= 5.2.1.1)
+      activestorage (= 5.2.1.1)
+      activesupport (= 5.2.1.1)
       bundler (>= 1.3.0)
-      railties (= 5.2.0)
+      railties (= 5.2.1.1)
       sprockets-rails (>= 2.0.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    railties (5.2.0)
-      actionpack (= 5.2.0)
-      activesupport (= 5.2.0)
+    railties (5.2.1.1)
+      actionpack (= 5.2.1.1)
+      activesupport (= 5.2.1.1)
       method_source
       rake (>= 0.8.7)
-      thor (>= 0.18.1, < 2.0)
+      thor (>= 0.19.0, < 2.0)
     rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    redis (4.0.1)
+    redis (4.0.3)
     redis-namespace (1.6.0)
       redis (>= 3.0.4)
     ref (2.0.0)
@@ -238,11 +252,11 @@ GEM
       redis (>= 3.3, < 5)
       resque (~> 1.26)
       rufus-scheduler (~> 3.2)
-    ruby-progressbar (1.9.0)
+    ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
-    rufus-scheduler (3.4.2)
-      et-orbi (~> 1.0)
-    sass (3.5.6)
+    rufus-scheduler (3.5.2)
+      fugit (~> 1.1, >= 1.1.5)
+    sass (3.7.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -253,23 +267,32 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    savon (2.12.0)
+      akami (~> 1.2)
+      builder (>= 2.1.2)
+      gyoku (~> 1.2)
+      httpi (~> 2.3)
+      nokogiri (>= 1.8.1)
+      nori (~> 2.4)
+      wasabi (~> 3.4)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
     shoulda-context (1.2.2)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    sinatra (2.0.1)
+    sinatra (2.0.4)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.1)
+      rack-protection (= 2.0.4)
       tilt (~> 2.0)
+    socksify (1.7.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -279,17 +302,20 @@ GEM
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
-    thor (0.20.0)
+    thor (0.20.3)
     thread_safe (0.3.6)
-    tilt (2.0.8)
+    tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.10)
+    uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
     vegas (0.1.11)
       rack (>= 1.0.0)
-    warden (1.2.7)
-      rack (>= 1.0)
+    warden (1.2.8)
+      rack (>= 2.0.6)
+    wasabi (3.5.0)
+      httpi (~> 2.0)
+      nokogiri (>= 1.4.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -306,6 +332,7 @@ DEPENDENCIES
   byebug
   cancancan (~> 2.0)
   company_data_faker
+  cpf_cnpj
   cpf_faker
   enumerate_it
   execjs
@@ -316,12 +343,13 @@ DEPENDENCIES
   mocha
   paranoia
   pg
-  rails (~> 5.2.0)
+  rails (~> 5.2.1)
   rename
   resque
   resque-scheduler
   sass-rails (~> 5.0)
-  shoulda
+  savon
+  shoulda (= 3.5)
   shoulda-context
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -329,7 +357,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
 
 RUBY VERSION
-   ruby 2.4.4p296
+   ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.6

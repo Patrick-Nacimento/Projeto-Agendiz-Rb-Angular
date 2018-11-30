@@ -1,21 +1,23 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: 10.1.1.241
   user: postgres
   pool: 10
+  password: p0stgr3s
 
 development:
   <<: *default
-  database: project_base_development
+  database: pits_development
 
 test:
   <<: *default
-  database: project_base_test
+  database: pits_test
 
 sandbox:
   <<: *default
-  database: project_base_sandbox
+  database: pits_sandbox
 
 production:
   <<: *default
-  database: project_base_production
+  database: pits_production
