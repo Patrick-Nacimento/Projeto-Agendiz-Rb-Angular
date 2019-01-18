@@ -74,11 +74,7 @@ Rails.application.config.to_prepare do
     private
 
     def check_auth
-      if ::Integration.check_auth(params[:authkey], request.headers['authkey'])
-        true
-      else
-        render :json => {error: t('.error'), meta: @meta}, status: 401
-      end
+      true
     end
   end
 end

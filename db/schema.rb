@@ -10,10 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_25_125502) do
+ActiveRecord::Schema.define(version: 2018_11_23_144850) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "groups", force: :cascade do |t|
+    t.string "area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "recruiter_id"
+    t.index ["recruiter_id"], name: "index_groups_on_recruiter_id"
+  end
+
+  create_table "integrations", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "auth_key", null: false
+    t.integer "created_by_id"
+    t.integer "updated_by_id"
+    t.boolean "active", default: true
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["active"], name: "index_integrations_on_active"
+    t.index ["auth_key"], name: "index_integrations_on_auth_key"
+    t.index ["created_by_id"], name: "index_integrations_on_created_by_id"
+    t.index ["deleted_at"], name: "index_integrations_on_deleted_at"
+    t.index ["name"], name: "index_integrations_on_name"
+    t.index ["updated_by_id"], name: "index_integrations_on_updated_by_id"
+  end
+
+  create_table "interns", force: :cascade do |t|
+    t.string "description"
+    t.integer "age"
+    t.string "telephone"
+    t.string "quality"
+    t.string "defect"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "group_id"
+    t.index ["group_id"], name: "index_interns_on_group_id"
+  end
+
+  create_table "recruiters", force: :cascade do |t|
+    t.string "description"
+    t.string "cnpj"
+    t.string "telephone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", null: false
@@ -43,7 +85,7 @@ ActiveRecord::Schema.define(version: 2018_04_25_125502) do
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, where: "(deleted_at IS NULL)"
+    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
 end

@@ -1,0 +1,44 @@
+{
+    "interns": {
+        "name": {
+            "one": "Estagiário",
+            "other": "Estagiários"
+        },
+        "list": {
+            "not_found": {
+                "message": "Não existem grupos cadastrados",
+                "message_filters": "Grupos não encontrados",
+                "tip": "Cadastre um grupo e ele aparecerá aqui.",
+                "tip_filters": "Redefina seus filtros e tente novamente."
+            }
+        },
+        "data_table": {
+            "columns": {
+                "description": "Nome",
+                "age": "Idade",
+                "telephone": "Telefone",
+                "quality": "Qualidade",
+                "defect": "Pontos a melhorar",
+                "group_id": "Grupo"
+            }
+        },
+        "filters": {},
+        "tabs": {
+            "general": "Dados cadastrais"
+        },
+        "params": {
+            "description": "Nome",
+            "age": "Idade",
+            "telephone": "Telefone",
+            "quality": "Qualidade",
+            "defect": "Pontos a melhorar",
+            "group": "Grupo"
+        },
+        "enumerations": {
+            "status": {
+                "1": "Ativos",
+                "2": "Inativos"
+            }
+        }
+    }
+}

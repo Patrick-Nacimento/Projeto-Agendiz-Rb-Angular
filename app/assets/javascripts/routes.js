@@ -12,6 +12,42 @@ this.app.config(['$routeProvider', '$locationProvider', function ($routeProvider
             resolve: authRouteResolverLogged(null, ['dashboard']),
             reloadOnSearch: false
         })
+        .when('/grupos', {
+            templateUrl: routeIndexView,
+            controller: 'GroupsIndexCtrl',
+            resolve: authRouteResolverLogged(null, ['groups']),
+            reloadOnSearch: false
+        })
+        .when('/grupos/:id', {
+            templateUrl: routeShowView,
+            controller: 'GroupsShowCtrl',
+            resolve: authRouteResolverLogged(null, ['groups']),
+            reloadOnSearch: false
+        })
+        .when('/estagiários', {
+            templateUrl: routeIndexView,
+            controller: 'InternsIndexCtrl',
+            resolve: authRouteResolverLogged(null, ['interns']),
+            reloadOnSearch: false
+        })
+        .when('/estagiários/:id', {
+            templateUrl: routeShowView,
+            controller: 'InternsShowCtrl',
+            resolve: authRouteResolverLogged(null, ['interns']),
+            reloadOnSearch: false
+        })
+        .when('/recrutadores', {
+            templateUrl: routeIndexView,
+            controller: 'RecruitersIndexCtrl',
+            resolve: authRouteResolverLogged(null, ['recruiters']),
+            reloadOnSearch: false
+        })
+        .when('/recrutadores/:id', {
+            templateUrl: routeShowView,
+            controller: 'RecruitersShowCtrl',
+            resolve: authRouteResolverLogged(null, ['recruiters']),
+            reloadOnSearch: false
+        })
         .when('/acesso/administradores', {
             templateUrl: routeIndexView,
             controller: 'AdministratorsIndexCtrl',

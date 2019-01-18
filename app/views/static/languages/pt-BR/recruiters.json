@@ -1,0 +1,38 @@
+{
+    "recruiters": {
+        "name": {
+            "one": "Recrutador",
+            "other": "Recrutadores"
+        },
+        "list": {
+            "not_found": {
+                "message": "Não existem grupos cadastrados",
+                "message_filters": "Grupos não encontrados",
+                "tip": "Cadastre um grupo e ele aparecerá aqui.",
+                "tip_filters": "Redefina seus filtros e tente novamente."
+            }
+        },
+        "data_table": {
+            "columns": {
+                "description": "Nome",
+                "cnpj": "CNPJ",
+                "telephone": "Telefone"
+            }
+        },
+        "filters": {},
+        "tabs": {
+            "general": "Dados cadastrais"
+        },
+        "params": {
+            "description": "Nome",
+            "cnpj": "CNPJ",
+            "telephone": "Telefone"
+        },
+        "enumerations": {
+            "status": {
+                "1": "Ativos",
+                "2": "Inativos"
+            }
+        }
+    }
+}

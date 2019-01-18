@@ -1,0 +1,36 @@
+{
+    "groups": {
+        "name": {
+            "one": "Grupo",
+            "other": "Grupos"
+        },
+        "list": {
+            "not_found": {
+                "message": "Não existem grupos cadastrados",
+                "message_filters": "Grupos não encontrados",
+                "tip": "Cadastre um grupo e ele aparecerá aqui.",
+                "tip_filters": "Redefina seus filtros e tente novamente."
+            }
+        },
+        "data_table": {
+            "columns": {
+                "area": "Area",
+                "recruiter_id": "Recrutador"
+            }
+        },
+        "filters": {},
+        "tabs": {
+            "general": "Dados cadastrais"
+        },
+        "params": {
+            "area": "Area",
+            "recruiter": "Recrutador"
+        },
+        "enumerations": {
+            "status": {
+                "1": "Ativos",
+                "2": "Inativos"
+            }
+        }
+    }
+}

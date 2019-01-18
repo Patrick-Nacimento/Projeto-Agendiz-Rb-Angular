@@ -3,6 +3,15 @@
     "modules": {
       "dashboard": {
         "label": "Dashboard"
+      },
+      "groups":{
+        "label": "Grupos"
+      },
+      "interns":{
+        "label": "Estágiarios"
+      },
+      "recruiters":{
+        "label": "Recrutadores"
       }
     },
     "config": {

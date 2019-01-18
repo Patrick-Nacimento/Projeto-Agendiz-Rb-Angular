@@ -5,7 +5,13 @@
     "dashboard": "/dashboard",
     "user_profile": "/meu_perfil",
     "modules": {
-      "dashboard": "/"
+      "dashboard": "/",
+      "groups": "grupos",
+      "group": "grupos/{{id}}",
+      "interns": "estagiários",
+      "intern": "estagiários/{{id}}",
+      "recruiters": "recrutadores",
+      "recruiter": "recrutadores/{{id}}"
     },
     "config": {
       "permission": {

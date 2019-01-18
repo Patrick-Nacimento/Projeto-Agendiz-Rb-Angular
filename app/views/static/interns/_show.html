@@ -1,0 +1,31 @@
+<div layout="column" class="md-padding">
+    <form name="form">
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="description" model="object.description" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+        
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="age" model="object.age" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="telephone" model="object.telephone" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+    
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="quality" model="object.quality" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+    
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="defect" model="object.defect" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+
+        <form-autocomplete flex class="md-block" form="form" object="object.group" name="group"
+            translation-base="resourceConfig.translationBase" selected-item="object.group" item-name-property="area"
+            controller="AutocompleteGroupsCtrl" permission="true" required="true" no-float="true">
+        </form-autocomplete>
+
+        </form>
+
+    <div layout layout-align="end center">
+        <button-with-loading class="'md-primary'" on-click="save(loadingPromise, object, form)"
+            aria-label="('buttons.save' | translate)" type="submit">
+                Salvar
+        </button-with-loading>
+    </div>
+</div>

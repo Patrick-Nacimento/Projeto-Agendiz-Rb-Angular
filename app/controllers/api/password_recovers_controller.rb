@@ -1,7 +1,7 @@
 module API
   class PasswordRecoversController < ::APIAuth::BaseController
-    skip_before_action :require_authentication
-    before_action :require_no_authentication
+    # skip_before_action :require_authentication
+    # before_action :require_no_authentication
 
     def create
       user = ::User.find_by(email: create_params[:email])

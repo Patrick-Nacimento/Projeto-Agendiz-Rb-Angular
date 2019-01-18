@@ -1,0 +1,21 @@
+<div class="min-width-md">
+    <h2 class="md-title">
+        {{ ::'dialogs.title.new' | translate}}
+        <span class="lowercase">
+            {{ ::resourceConfig.translationBase + '.name.one' | translate}}
+        </span>
+    </h2>
+
+    <div layout="column">
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="description" model="object.description" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="cnpj" model="object.cnpj" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+
+        <md-input-container flex class="md-block" form-input form="form" translation-base="resourceConfig.translationBase"
+            name="telephone" model="object.telephone" autocomplete="false" empty="false" permission="true" required="true"></md-input-container>
+
+    </div>
+</div>
+
